@@ -10,6 +10,16 @@ public class TestModel {
 		 * 	Write here your test model
 		 */
 
+		for(Corso c : model.getTuttiICorsi()) {
+			System.out.println(c.getNome());
+		}
+		
+	Studente s = model.getStudenteByMatricola(146101);
+		System.out.println(s.getNome());
+	
+		for(Corso c : model.getCorsiByMatricolaStudente(146101)) {
+			System.out.println(c.getNome());
+		}
 	}
 
 }
